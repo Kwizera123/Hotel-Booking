@@ -56,7 +56,7 @@
                       @csrf
 										
 											<div class="col-12">
-												<label for="inputEmailAddress" class="form-label">Email</label>
+												<label for="inputEmailAddress" class="form-label">Email/Name/Phone</label>
 												<input type="text" class="form-control" id="login" name="login" placeholder="jhon@example.com">
 											</div>
 											<div class="col-12">
