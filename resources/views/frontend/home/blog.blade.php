@@ -10,7 +10,7 @@
           <div class="col-lg-4 col-md-6">
               <div class="blog-item">
                   <a href="blog-details.html">
-                      <img src="assets/img/blog/blog-item-img1.jpg" alt="Images">
+                      <img src="{{ asset('frontend/assets/img/blog/blog-item-img1.jpg')}}" alt="Images">
                   </a>
                   <div class="content">
                       <ul>
@@ -32,7 +32,7 @@
           <div class="col-lg-4 col-md-6">
               <div class="blog-item">
                   <a href="blog-details.html">
-                      <img src="assets/img/blog/blog-item-img2.jpg" alt="Images">
+                      <img src="{{ asset('frontend/assets/img/blog/blog-item-img2.jpg')}}" alt="Images">
                   </a>
                   <div class="content">
                       <ul>
@@ -54,7 +54,7 @@
           <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
               <div class="blog-item">
                   <a href="blog-details.html">
-                      <img src="assets/img/blog/blog-item-img3.jpg" alt="Images">
+                      <img src="{{ asset('frontend/assets/img/blog/blog-item-img3.jpg')}}" alt="Images">
                   </a>
                   <div class="content">
                       <ul>

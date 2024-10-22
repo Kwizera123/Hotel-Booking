@@ -9,7 +9,7 @@
       <div class="team-slider-two owl-carousel owl-theme pt-45">
           <div class="team-item">
               <a href="team.html">
-                  <img src="assets/img/team/team-img1.jpg" alt="Images">
+                  <img src="{{ asset('frontend/assets/img/team/team-img1.jpg')}}" alt="Images">
               </a>
               <div class="content">
                   <h3><a href="team.html">Tom Shumate</a></h3>
@@ -33,7 +33,7 @@
 
           <div class="team-item">
               <a href="team.html">
-                  <img src="assets/img/team/team-img2.jpg" alt="Images">
+                  <img src="{{ asset('frontend/assets/img/team/team-img2.jpg')}}" alt="Images">
               </a>
               <div class="content">
                   <h3><a href="team.html">Carrie Horton</a></h3>
@@ -57,7 +57,7 @@
 
           <div class="team-item">
               <a href="team.html">
-                  <img src="assets/img/team/team-img5.jpg" alt="Images">
+                  <img src="{{ asset('frontend/assets/img/team/team-img5.jpg')}}" alt="Images">
               </a>
               <div class="content">
                   <h3><a href="team.html">Brian Orlando</a></h3>
@@ -81,7 +81,7 @@
 
           <div class="team-item">
               <a href="team.html">
-                  <img src="assets/img/team/team-img4.jpg" alt="Images">
+                  <img src="{{ asset('frontend/assets/img/team/team-img4.jpg')}}" alt="Images">
               </a>
               <div class="content">
                   <h3><a href="team.html">Michael Evens</a></h3>
