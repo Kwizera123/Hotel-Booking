@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 
 class UserController extends Controller
 {
@@ -45,6 +46,23 @@ class UserController extends Controller
         );
 
         return redirect()->back()->with($notification);
+
+    }// End Method
+
+    public function UserLogout(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        $notification = array(
+            'message' => 'User Logged Out Successfully',
+            'alert-type' => 'info'
+        );
+
+        return redirect('/login')->with($notification);
 
     }// End Method
 }
