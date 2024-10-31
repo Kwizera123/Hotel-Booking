@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Backend\TeamController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -36,8 +37,17 @@ Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('ad
 Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
 Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
 Route::post('/admin/password/update', [AdminController::class, 'AdminPasswordUpdate'])->name('admin.password.update');
-});
+}); // End of Admin Group Middleware 
 
 
 
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
+
+// Admin Group Middleware 
+Route::middleware(['auth','roles:admin'])->group(function(){
+    // Team all Route
+    Route::controller(TeamController::class)->group(function(){
+        Route::get('/all/team','AllTeam')->name('all.team');
+    });
+
+}); // End of Admin Group Middleware 

@@ -28,6 +28,11 @@
 	<!-- toaster CSS -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 	<!-- End of toaster CSS -->
+
+	<!-- dataTables CSS -->
+	<link href="{{asset('backend/assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
+	<!-- End dataTables CSS -->
+
 	<title>Admin Dashboard</title>
 </head>
 
@@ -107,6 +112,16 @@
  }
  @endif 
 </script>
+
+<!--dataTables JS-->
+<script src="{{asset('backend/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{asset('backend/assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
+<script>
+	$(document).ready(function() {
+		$('#example').DataTable();
+		} );
+</script>
+<!-- End dataTables JS-->
 
 </body>
 
