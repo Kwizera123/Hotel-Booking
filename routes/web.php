@@ -48,6 +48,7 @@ Route::middleware(['auth','roles:admin'])->group(function(){
     // Team all Route
     Route::controller(TeamController::class)->group(function(){
         Route::get('/all/team','AllTeam')->name('all.team');
+        Route::get('/add/team','AddTeam')->name('add.team');
     });
 
 }); // End of Admin Group Middleware 
