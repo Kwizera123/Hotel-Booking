@@ -37,12 +37,11 @@
             </tr>
           </thead>
           <tbody>
-            @foreach ($team as $key=> $item)
-              
+            @foreach ($team as $key=> $item)         
             
             <tr>
               <td>{{ $key+1}}</td>
-              <td><img src="{{ asset($item->image) }}" alt="" style="width: 70px; height: 40px;"></td>
+              <td><img src="{{ asset($item->image) }}" alt="" style="width:70px; height:40px;"></td>
               <td>{{ $item->name }}</td>
               <td>{{ $item->position }}</td>
               <td>{{ $item->facebook }}</td>
