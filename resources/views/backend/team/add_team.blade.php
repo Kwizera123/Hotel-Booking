@@ -25,48 +25,48 @@
         <div class="col-lg-8">
           <div class="card">
 
-              <form action="{{ route('team.store')}}" method="post" enctype="multipart/form-data">
+              <form id="myForm" action="{{ route('team.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
             <div class="card-body">
               <div class="row mb-3">
                 <div class="col-sm-3">
-                  <h6 class="mb-0">Name</h6>
+                  <h6 class="mb-0">Name <span class="text-danger">*</span></h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="form-group col-sm-9 text-secondary">
                   <input type="text" name="name" class="form-control" />
                 </div>
               </div>
               <div class="row mb-3">
                 <div class="col-sm-3">
-                  <h6 class="mb-0">Position</h6>
+                  <h6 class="mb-0">Position <span class="text-danger">*</span></h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="form-group col-sm-9 text-secondary">
                   <input type="text" name="position" class="form-control"/>
                 </div>
               </div>
               <div class="row mb-3">
                 <div class="col-sm-3">
-                  <h6 class="mb-0">Facebook</h6>
+                  <h6 class="mb-0">Facebook <span class="text-danger">*</span></h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="form-group col-sm-9 text-secondary">
                   <input type="text" name="facebook" class="form-control"/>
                 </div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-sm-3">
-                  <h6 class="mb-0">Tweeter</h6>
+                  <h6 class="mb-0">Tweeter <span class="text-danger">*</span></h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="form-group col-sm-9 text-secondary">
                   <input type="text" name="tweeter" class="form-control"/>
                 </div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-sm-3">
-                  <h6 class="mb-0">Instagram</h6>
+                  <h6 class="mb-0">Instagram <span class="text-danger">*</span></h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="form-group col-sm-9 text-secondary">
                   <input type="text" name="instagram" class="form-control"/>
                 </div>
               </div>
@@ -74,9 +74,9 @@
 
               <div class="row mb-3">
                 <div class="col-sm-3">
-                  <h6 class="mb-0">Pinterest</h6>
+                  <h6 class="mb-0">Pinterest <span class="text-danger">*</span></h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="form-group col-sm-9 text-secondary">
                   <input type="text" name="pinterest" class="form-control"/>
                 </div>
               </div>
@@ -85,9 +85,9 @@
 
               <div class="row mb-3">
                 <div class="col-sm-3">
-                  <h6 class="mb-0">Photo</h6>
+                  <h6 class="mb-0">Photo <span class="text-info">*</span></h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="form-group col-sm-9 text-secondary">
                   <input class="form-control" name="image" type="file" id="image">
                 </div>
               </div>
@@ -121,6 +121,74 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function (){
+      $('#myForm').validate({
+          rules: {
+            name: {
+                  required : true,
+              }, 
+              position: {
+                  required : true,
+              }, 
+              facebook: {
+                  required : true,
+              }, 
+              tweeter: {
+                  required : true,
+              }, 
+              instagram: {
+                  required : true,
+              }, 
+              pinterest: {
+                  required : true,
+              }, 
+              image: {
+                  required : true,
+              }, 
+              
+          },
+          messages :{
+            name: {
+                  required : 'Please Enter Team Name',
+              }, 
+              position: {
+                  required : 'Please Enter Team Position',
+              },
+              facebook: {
+                  required : 'Please Enter Team Facebook Account',
+              },
+              tweeter: {
+                  required : 'Please Enter Team X (EX Tweeter) Account',
+              },
+              instagram: {
+                  required : 'Please Enter Team Instagram Account',
+              },
+              pinterest: {
+                  required : 'Please Enter Team Pinterest Account',
+              },
+              image: {
+                  required : 'Please Select Team Image',
+              },
+               
+
+          },
+          errorElement : 'span', 
+          errorPlacement: function (error,element) {
+              error.addClass('invalid-feedback');
+              element.closest('.form-group').append(error);
+          },
+          highlight : function(element, errorClass, validClass){
+              $(element).addClass('is-invalid');
+          },
+          unhighlight : function(element, errorClass, validClass){
+              $(element).removeClass('is-invalid');
+          },
+      });
+  });
+  
+</script>
 
 <script type="text/javascript">
 
