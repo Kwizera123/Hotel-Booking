@@ -116,4 +116,9 @@ class TeamController extends Controller
         return redirect()->back()->with($notification);
 
     }// End Method
+
+    // ----------------------------BOOK AREA------------------------------
+    public function BookArea(){
+        
+    }// End Method
 }

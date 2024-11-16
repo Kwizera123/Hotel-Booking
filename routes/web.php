@@ -55,4 +55,12 @@ Route::middleware(['auth','roles:admin'])->group(function(){
         Route::get('/delete/team/{id}','DeleteTeam')->name('delete.team');
     });
 
+    // Book ARea Group Middleware 
+
+    Route::controller(TeamController::class)->group(function(){
+        
+        Route::get('/book/area','BookArea')->name('book.area');
+      
+    });
+
 }); // End of Admin Group Middleware 
