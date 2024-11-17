@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Team;
 use Intervention\Image\Facades\Image;
 use Carbon\Carbon;
+use App\Models\BookArea;
 
 class TeamController extends Controller
 {
@@ -119,6 +120,7 @@ class TeamController extends Controller
 
     // ----------------------------BOOK AREA------------------------------
     public function BookArea(){
-        
+        $book = BookArea::find(1);
+        return view('backend.bookarea.book_area',compact('book'));
     }// End Method
 }
