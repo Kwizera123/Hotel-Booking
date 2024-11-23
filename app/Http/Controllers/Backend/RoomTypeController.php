@@ -24,7 +24,7 @@ class RoomTypeController extends Controller
 
         RoomType::insert([
             'name' => $request->name,
-            'created_at' => Carbon::now()
+            'created_at' => Carbon::now(),
         ]);
 
         $notification = array(
