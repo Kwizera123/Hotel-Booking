@@ -12,7 +12,7 @@
           <li class="breadcrumb-item"><a href="javascript:;"></a>
           </li>
           
-          <a href="{{ route('add.team')}}" class="btn btn-outline-primary px-5 radius-30">Add Room Type</a>
+          <a href="{{ route('add.room.type')}}" class="btn btn-outline-primary px-5 radius-30">Add Room Type</a>
         </ol>
       </nav>
     </div>
@@ -38,7 +38,7 @@
             
             <tr>
               <td>{{ $key+1}}</td>
-              <td><img src="{{ asset($item->image) }}" alt="" style="width:70px; height:40px;"></td>
+              <td></td>
               <td>{{ $item->name }}</td>
               <td>
                 <a href="{{ route('edit.team',$item->id)}}" class="btn btn-warning px-3 radius-30">Edit</a>
