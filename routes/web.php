@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\RoomTypeController;
+use App\Http\Controllers\Backend\RoomController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -73,4 +74,12 @@ Route::middleware(['auth','roles:admin'])->group(function(){
       
     });
 
-}); // End of Admin Group Middleware 
+
+        // Room  All Route // 
+        Route::controller(RoomController::class)->group(function(){
+        
+            Route::get('/edit/room/{id}','EditRoom')->name('edit.room');
+          
+        });
+
+}); // End of Admin Group Middleware  
