@@ -116,7 +116,7 @@
 
   <div class="col-md-12 main-container">
     <label for="input11" class="form-label">Description</label>
-    <textarea name="description" class="form-control" id="myeditorinstance">{!! $editData->description !!}</textarea>
+    <textarea name="description" class="form-control" id="">{!! $editData->description !!}</textarea>
   </div>
 
 
@@ -170,8 +170,8 @@
             <div class="basic_facility_section_remove" id="basic_facility_section_remove">
                 <div class="row add_item">
                     <div class="col-md-6">
-                        <label for="basic_facility_name" class="form-label">Room Facilities </label>
-                        <select name="basic_facility_name[]" id="basic_facility_name" class="form-control">
+                        <label for="facility_name" class="form-label">Room Facilities </label>
+                        <select name="facility_name[]" id="facility_name" class="form-control">
     <option value="">Select Facility</option>
     <option value="Complimentary Breakfast">Complimentary Breakfast</option>
     <option value="32/42 inch LED TV" > 32/42 inch LED TV</option>
@@ -293,8 +293,8 @@
         <div class="container mt-2">
            <div class="row">
               <div class="form-group col-md-6">
-                 <label for="basic_facility_name">Room Facilities</label>
-                 <select name="basic_facility_name[]" id="basic_facility_name" class="form-control">
+                 <label for="facility_name">Room Facilities</label>
+                 <select name="facility_name[]" id="facility_name" class="form-control">
                        <option value="">Select Facility</option>
 <option value="Complimentary Breakfast">Complimentary Breakfast</option>
 <option value="32/42 inch LED TV" > 32/42 inch LED TV</option>
